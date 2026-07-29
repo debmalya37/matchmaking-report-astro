@@ -1203,7 +1203,7 @@ Our  Surbhi Matchmaking Report  Report helps you understand your planetary posit
                 </div> */}
 
                 {/* CTA Button */}
-                <a href="/checkout?service=Couple%20Match%20Making&plan=Basic%20Match%20(%E2%82%B91%2C100)" className="btn-auto-shine block w-full bg-gradient-to-r from-[#D9481E] to-[#A32A0C] text-white py-4 rounded-xl font-medium text-center text-lg shadow-[0_10px_20px_rgba(217,72,30,0.3)] hover:-translate-y-0.5 transition-transform duration-300">
+                <a href="https://kundalireport.surabhiastrology.com/checkout?service=Couple%20Match%20Making&plan=Basic%20Match%20(%E2%82%B91%2C100)" className="btn-auto-shine block w-full bg-gradient-to-r from-[#D9481E] to-[#A32A0C] text-white py-4 rounded-xl font-medium text-center text-lg shadow-[0_10px_20px_rgba(217,72,30,0.3)] hover:-translate-y-0.5 transition-transform duration-300">
                   BUY NOW →
                 </a>
 
