@@ -394,7 +394,7 @@ const time = useCountdown();
     alt="Celebrity Astrologer Surbhi Gupta"
     // 1. Provide the maximum desktop dimensions here
     width={250} 
-    priority="true"
+    
     height={64}
     // 2. Add 'sizes' to tell Next.js to serve a smaller physical file for mobile
     sizes="(max-width: 768px) 150px, 250px"
