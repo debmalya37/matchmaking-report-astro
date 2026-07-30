@@ -1062,7 +1062,7 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <a href="https://kundalireport.surabhiastrology.com/checkout?service=Couple%20Match%20Making&plan=Basic%20Match%20(%E2%82%B91%2C100)" 
+                <a href="/checkout?service=Couple%20Match%20Making&plan=Basic%20Match%20(%E2%82%B91%2C100)" 
                    className="btn-auto-shine w-full bg-gradient-to-r from-[#D9481E] to-[#A32A0C] text-white py-3.5 sm:py-4 rounded-xl font-bold text-center text-base sm:text-lg shadow-lg hover:-translate-y-0.5 transition-transform">
                   BUY NOW →
                 </a>
