@@ -24,18 +24,29 @@ export default function MatchmakingHero() {
   const [showVideo, setShowVideo] = useState(false);
 
   return (
-    // min-h-screen for mobile to fit everything cleanly, flex column to push stats to bottom
     <section className="relative min-h-screen lg:min-h-[90vh] overflow-hidden bg-ink flex flex-col">
       
-      {/* Background zodiac wheel */}
+      {/* Background zodiac wheel - Mobile & Desktop Separate Images */}
       <div className="absolute inset-0 z-0">
+        {/* Mobile Background Image */}
         <Image
-          src="/zodiac-wheel.jpg" // Update this path to your actual public directory path
-          alt="Astrology Zodiac Background"
+          src="/bg-mobile.png"
+          alt="Astrology Zodiac Mobile Background"
           fill
-          className="object-cover object-right opacity-90"
+          className="block sm:hidden object-cover object-center opacity-90"
           priority
         />
+
+        {/* Desktop Background Image */}
+        <Image
+          src="/zodiac-wheel.jpg"
+          alt="Astrology Zodiac Background"
+          fill
+          className="hidden sm:block object-cover object-right opacity-90"
+          priority
+        />
+
+        {/* Overlays */}
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 lg:via-transparent to-ink/40" />
       </div>
@@ -46,10 +57,10 @@ export default function MatchmakingHero() {
         style={{ background: "color-mix(in oklab, var(--gold) 35%, transparent)" }}
       />
 
-      {/* Main Grid Content - flex-1 allows it to take up space above the relative stats bar on mobile */}
+      {/* Main Grid Content */}
       <div className="relative z-10 mx-auto grid w-full max-w-7xl gap-10 lg:gap-8 px-4 pb-16 lg:pb-32 pt-24 sm:pt-28 lg:pt-36 lg:grid-cols-2 lg:items-center flex-1">
         
-        {/* Left: copy - Centered on mobile, left-aligned on desktop */}
+        {/* Left: copy */}
         <div className="flex flex-col justify-center items-center text-center lg:items-start lg:text-left">
           <span className="inline-flex w-fit items-center gap-2 rounded-full border border-gold/40 bg-ink/30 px-3 py-1 text-[10px] sm:text-xs uppercase tracking-[0.2em] text-gold backdrop-blur-sm">
             <Star className="h-3 w-3 fill-gold text-gold" /> Premium Vedic Report
@@ -63,7 +74,7 @@ export default function MatchmakingHero() {
             expert Vedic astrologers — Guna Milan, Mangal Dosha, remedies and life-path compatibility.
           </p>
 
-          {/* Buttons - Stacked full width on mobile, inline on desktop */}
+          {/* Buttons */}
           <div className="mt-8 flex flex-col sm:flex-row w-full sm:w-auto flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 text-white">
             <a
               href="#pricing"
@@ -124,7 +135,7 @@ export default function MatchmakingHero() {
         </div>
       </div>
 
-      {/* Stats bar - Relative on mobile (so it sits below content without overlapping), Absolute on Desktop */}
+      {/* Stats bar */}
       <div className="relative lg:absolute bottom-0 left-0 right-0 z-20 mt-auto border-t border-gold/20 bg-white px-4 py-4 sm:py-5 shadow-elegant backdrop-blur-sm w-full">
         <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-y-4 gap-x-6 sm:gap-8 lg:gap-10 lg:justify-between">
           <HeroStat n="1.5 lakh +" label="Reports Delivered" />
