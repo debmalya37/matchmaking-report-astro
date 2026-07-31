@@ -80,7 +80,7 @@ export default function MatchmakingHero() {
               href="#pricing"
               className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl sm:rounded bg-gradient-to-r from-[#B9861D] to-[#EED39D] px-6 sm:px-7 py-3.5 sm:py-4 text-sm font-bold text-[#0A1931] shadow-elegant transition hover:brightness-105"
             >
-              Get your Kundli Matching Report
+              Get your Kundli Matchmaking Report
               <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
             </a>
             
