@@ -47,7 +47,7 @@ function ComparisonSlider2() {
       <div className="absolute inset-0 bg-[#0A1A10]">
         {/* Happy/Prosperous Background Image */}
         <img 
-          src="/life-after.jpeg" 
+          src="/life-after.png" 
           alt="Life After Kundali" 
           className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-screen"
           onError={(e) => {
@@ -63,10 +63,11 @@ function ComparisonSlider2() {
             <h3 className="fraunces text-2xl lg:text-4xl font-bold text-[#A0F0C8] mb-4 lg:mb-6">AFTER  Surbhi Matchmaking Report </h3>
             <ul className="space-y-4 lg:space-y-5">
               {[
-                { t: "Exact Guna score", d: "you know where you stand" },
-                { t: "Expert Analysis", d: "Both families reassured with expert analysis" },
-                { t: "Personalized Remedies", d: "Personalized remedies for any Dosha" },
-                { t: "Auspicious Wedding Windows", d: "Auspicious wedding windows revealed" },
+                { t: "Compatibility Clarity", d: "Know your strengths and challenges before saying yes." },
+                { t: "Accurate Guna Matching", d: "Understand your compatibility score with detailed insights." },
+                { t: "Dosha & Nadi Analysis", d: "Identify potential concerns with expert guidance." },
+                { t: "Marriage Readiness Report", d: "Make confident decisions backed by astrology." },
+                { t: "Personalized Remedies", d: "Simple remedies to strengthen compatibility and harmony." },
               ].map((l, i) => (
                 <li key={i} className="flex flex-col items-end border-b border-white/10 pb-3">
                   <div className="flex items-center gap-3"><h4 className="text-white font-bold text-base lg:text-lg">{l.t}</h4><span className="text-xl">✨</span></div>
@@ -117,10 +118,11 @@ function ComparisonSlider2() {
             <h3 className="fraunces text-2xl lg:text-4xl font-bold text-[#FF8080] mb-4 lg:mb-6">BEFORE  Surbhi Matchmaking Report  </h3>
             <ul className="space-y-4 lg:space-y-5">
               {[
-                { t: "Constant Confusion", d: "Endless doubts about long-term compatibility" },
-                { t: "Money Slipping Away", d: "Family pressure with no clear answer" },
-                { t: "Fear of Hidden Mismatches", d: "Fear of hidden Dosha or Nadi mismatch" },
-                { t: "Relationship Struggles", d: "Wedding decisions delayed by guesswork" },
+                { t: "Confused About the Right Match", d: "Unsure if this is truly your life partner." },
+                { t: " Fear of Compatibility Issues", d: "Worried about future conflicts after marriage." },
+                { t: "Too Many Opinions", d: "Family, friends, and relatives leave you more confused." },
+                { t: "Delayed Marriage Decisions", d: "Every proposal feels like a gamble." },
+                { t: "Emotional & Financial Stress", d: "Time and money spent on uncertain matches." },
               ].map((l, i) => (
                 <li key={i} className="flex flex-col items-start border-b border-white/5 pb-3">
                   <div className="flex items-center gap-3"><span className="text-xl">😰</span><h4 className="text-white font-bold text-base lg:text-lg">{l.t}</h4></div>
