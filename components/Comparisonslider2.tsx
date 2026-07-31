@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
 /* ─── COMPARISON SLIDER COMPONENT ─── */
@@ -46,28 +47,25 @@ function ComparisonSlider2() {
           ========================================== */}
       <div className="absolute inset-0 bg-[#0A1A10]">
         {/* Happy/Prosperous Background Image */}
-        <img 
+        <Image 
           src="/life-after.png" 
           alt="Life After Kundali" 
           className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-screen"
-          onError={(e) => {
-            e.currentTarget.onerror = null; 
-            e.currentTarget.src = "https://images.unsplash.com/photo-1571260899304-42507011ec6a?auto=format&fit=crop&q=80&w=1200&h=800"; // Fallback happy image
-          }} 
+          fill
         />
         
-        <div className="absolute inset-0 flex flex-col justify-between p-6 lg:p-12">
+        <div className="absolute inset-0 flex flex-col justify-between p-2 lg:p-6">
           
           {/* Top Right: After Text */}
-          <div className="text-right max-w-sm ml-auto z-10 pl-12">
-            <h3 className="fraunces text-2xl lg:text-4xl font-bold text-[#A0F0C8] mb-4 lg:mb-6">AFTER  Surbhi Matchmaking Report </h3>
-            <ul className="space-y-4 lg:space-y-5">
+          <div className="text-right max-w-md ml-auto z-10 pl-12">
+            <h3 className="fraunces text-2xl lg:text-2xl font-bold text-[#A0F0C8] mb-2 lg:mb-4">AFTER  Surbhi Matchmaking Report </h3>
+            <ul className="space-y-2 lg:space-y-3">
               {[
                 { t: "Compatibility Clarity", d: "Know your strengths and challenges before saying yes." },
                 { t: "Accurate Guna Matching", d: "Understand your compatibility score with detailed insights." },
                 { t: "Dosha & Nadi Analysis", d: "Identify potential concerns with expert guidance." },
                 { t: "Marriage Readiness Report", d: "Make confident decisions backed by astrology." },
-                { t: "Personalized Remedies", d: "Simple remedies to strengthen compatibility and harmony." },
+                { t: "Personalized Remedies", d: "Simple remedies for better compatibility and harmony." },
               ].map((l, i) => (
                 <li key={i} className="flex flex-col items-end border-b border-white/10 pb-3">
                   <div className="flex items-center gap-3"><h4 className="text-white font-bold text-base lg:text-lg">{l.t}</h4><span className="text-xl">✨</span></div>
@@ -101,22 +99,20 @@ function ComparisonSlider2() {
           ========================================== */}
       <div className="absolute inset-0 bg-[#1A0505] clip-before border-r-[3px] border-[#C8A84B] z-20 shadow-[5px_0_15px_rgba(0,0,0,0.5)]">
         {/* Stressed/Gloomy Background Image */}
-        <img 
+        <Image 
           src="/life-before.jpeg" 
           alt="Life Before Kundali" 
           className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-luminosity grayscale"
-          onError={(e) => {
-            e.currentTarget.onerror = null; 
-            e.currentTarget.src = "https://images.unsplash.com/photo-1541888062923-8686d13bdde7?auto=format&fit=crop&q=80&w=1200&h=800"; // Fallback stressed image
-          }} 
+          fill
+
         />
         
-        <div className="absolute inset-0 flex flex-col justify-between p-6 lg:p-12">
+        <div className="absolute inset-0 flex flex-col justify-between p-2 lg:p-6">
           
           {/* Top Left: Before Text */}
-          <div className="text-left max-w-sm z-10 pr-12">
-            <h3 className="fraunces text-2xl lg:text-4xl font-bold text-[#FF8080] mb-4 lg:mb-6">BEFORE  Surbhi Matchmaking Report  </h3>
-            <ul className="space-y-4 lg:space-y-5">
+          <div className="text-left max-w-md z-10 pr-12">
+            <h3 className="fraunces text-2xl lg:text-2xl font-bold text-[#FF8080] mb-2 lg:mb-4">BEFORE  Surbhi Matchmaking Report  </h3>
+            <ul className="space-y-2 lg:space-y-3">
               {[
                 { t: "Confused About the Right Match", d: "Unsure if this is truly your life partner." },
                 { t: " Fear of Compatibility Issues", d: "Worried about future conflicts after marriage." },
