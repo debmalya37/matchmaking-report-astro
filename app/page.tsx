@@ -539,67 +539,69 @@ export default function HomePage() {
           WHAT CAN IT SOLVE? 
       ════════════════════════════════ */}
       <section className="py-12 md:py-16 lg:py-20 bg-[#121122] text-[#fdf2d8]">
-        <div className="max-w-7xl mx-auto px-4 md:px-5">
-          <div className="text-center mb-10 md:mb-16 reveal">
-            <h2 className="text-center Georgia text-3xl sm:text-4xl md:text-5xl leading-tight">
-              What can a <br className="md:hidden"/> <span className="italic text-gold">Surbhi Matchmaking Kundali</span> <br className="md:hidden"/> solve for you?
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-center text-white/80 text-sm md:text-base px-2">
-              Behind every "will we work?" there's a question the stars have already answered.
-              Here's what our report clarifies.
-            </p>
-          </div>
+  <div className="max-w-7xl mx-auto px-4 md:px-5">
+    <div className="text-center mb-10 md:mb-16 reveal">
+      <h2 className="text-center Georgia text-3xl sm:text-4xl md:text-5xl leading-tight">
+        What can a <br className="md:hidden"/> <span className="italic text-gold">Surbhi Matchmaking Kundali</span> <br className="md:hidden"/> solve for you?
+      </h2>
+      <p className="mx-auto mt-4 max-w-2xl text-center text-white/80 text-sm md:text-base px-2">
+        Behind every "will we work?" there's a question the stars have already answered.
+        Here's what our report clarifies.
+      </p>
+    </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
-            {[ 
-              { title: "Uncertainty about the match", desc: "Are you truly compatible, or just infatuated?", img: 'https://i.pinimg.com/736x/1f/4f/6a/1f4f6a78eaba164f0bf7d877413a7598.jpg' },
-              { title: "Family disapproval", desc: "Get scientific proof to align both families.", img: 'https://i.pinimg.com/736x/20/a3/67/20a3674b077682e08fc7cc594bb7f921.jpg' },
-              { title: "Arranged marriage decisions", desc: "Compare charts before you say yes.", img: 'https://i.pinimg.com/1200x/45/60/82/4560829e32e059476545fa79c9ec9ce3.jpg' },
-              { title: "Mangal / Nadi Dosha fears", desc: "Know the truth — and precise remedies.", img: 'https://i.pinimg.com/736x/98/dc/7d/98dc7d529f795bf76d6a5d0d234ebcf0.jpg' },
-              { title: "Long-term stability doubts", desc: "See health, wealth, and progeny outlook.", img: 'https://i.pinimg.com/736x/64/53/93/6453930edff82f7a4cfae6278f888709.jpg' },
-              { title: "Timing of marriage", desc: "Find your most auspicious window.", img: 'https://i.pinimg.com/736x/31/57/28/3157288468e2d3d3c69b8b5d093d7fc4.jpg' },
-            ].map((item, i) => (
-              <div 
-                key={i} 
-                className={`reveal d${(i % 3) + 1} group relative w-full aspect-[4/3] sm:aspect-[4/5] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden cursor-pointer bg-[#2A0E00] shadow-xl hover:shadow-[0_30px_60px_rgba(200,168,75,0.25)] transition-all duration-500 hover:-translate-y-2`}
-              >
-                <Image 
-                  src={item.img} 
-                  alt={item.title} 
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  quality={50} 
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 opacity-80 sm:opacity-90 group-hover:opacity-100" 
-                />
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
+      {[ 
+        { title: "Uncertainty about the match", desc: "Are you truly compatible, or just infatuated?", img: 'https://i.pinimg.com/736x/1f/4f/6a/1f4f6a78eaba164f0bf7d877413a7598.jpg' },
+        { title: "Family disapproval", desc: "Get scientific proof to align both families.", img: 'https://i.pinimg.com/736x/20/a3/67/20a3674b077682e08fc7cc594bb7f921.jpg' },
+        { title: "Arranged marriage decisions", desc: "Compare charts before you say yes.", img: 'https://i.pinimg.com/1200x/45/60/82/4560829e32e059476545fa79c9ec9ce3.jpg' },
+        { title: "Mangal / Nadi Dosha fears", desc: "Know the truth — and precise remedies.", img: 'https://i.pinimg.com/736x/98/dc/7d/98dc7d529f795bf76d6a5d0d234ebcf0.jpg' },
+        { title: "Long-term stability doubts", desc: "See health, wealth, and progeny outlook.", img: 'https://i.pinimg.com/736x/64/53/93/6453930edff82f7a4cfae6278f888709.jpg' },
+        { title: "Timing of marriage", desc: "Find your most auspicious window.", img: 'https://i.pinimg.com/736x/31/57/28/3157288468e2d3d3c69b8b5d093d7fc4.jpg' },
+      ].map((item, i) => (
+        <div 
+          key={i} 
+          /* CHANGED: Added `border border-white/20` for the subtle slim border, and `hover:border-white/40` to make it glow slightly on hover */
+          className={`reveal d${(i % 3) + 1} group relative w-full aspect-[4/3] sm:aspect-[4/5] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden cursor-pointer bg-[#2A0E00] border border-white/20 shadow-xl hover:shadow-[0_30px_60px_rgba(200,168,75,0.25)] hover:border-white/40 transition-all duration-500 hover:-translate-y-2`}
+        >
+          <Image 
+            src={item.img} 
+            alt={item.title} 
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            quality={50} 
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 opacity-100" 
+          />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1A0A00] via-[#1A0A00]/60 to-transparent opacity-90 transition-opacity duration-500"></div>
-                
-                <div className="absolute inset-x-0 bottom-0 p-6 lg:p-10 flex flex-col justify-end">
-                  <h3 className="Georgia text-xl lg:text-3xl font-medium text-[#F5D98A] transform transition-transform duration-500 ease-out group-hover:-translate-y-1 sm:group-hover:-translate-y-2">
-                    {item.title}
-                  </h3>
-                  
-                  <div className="w-8 h-1 bg-[#C8A84B] mt-3 mb-2 transition-all duration-500 ease-out group-hover:w-full opacity-50 sm:opacity-0 group-hover:opacity-100 rounded-full"></div>
-
-                  <div className="grid grid-rows-[1fr] sm:grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out">
-                    <div className="overflow-hidden">
-                      <p className="text-white/90 leading-relaxed text-sm pt-1 sm:pt-2 opacity-100 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                        {item.desc}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          {/* CHANGED: Switched to a bottom-heavy gradient (`from-[#1A0A00] via-transparent to-transparent`) and lowered opacity to `60` so the top 70% of the image is completely bright and untouched. */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1A0A00] from-10% via-[#1A0A00]/40 via-40% to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-90"></div>
           
-          <div className="mt-10 md:mt-16 text-center reveal">
-            <a href="#offer" className="btn-auto-shine block sm:inline-block w-full sm:w-auto bg-gradient-to-r from-[#DEB85D] to-[#EFCF7A] text-[#2A0E00] px-8 sm:px-12 py-4 sm:py-5 rounded-xl sm:rounded-2xl font-medium text-lg sm:text-xl shadow-[0_15px_30px_rgba(200,168,75,0.3)] hover:-translate-y-1 transition-transform duration-300">
-              Fix Your Problems NOW!
-            </a>
+          <div className="absolute inset-x-0 bottom-0 p-6 lg:p-10 flex flex-col justify-end z-10">
+            <h3 className="Georgia text-xl lg:text-3xl font-medium text-[#F5D98A] transform transition-transform duration-500 ease-out group-hover:-translate-y-1 sm:group-hover:-translate-y-2">
+              {item.title}
+            </h3>
+            
+            <div className="w-8 h-1 bg-[#C8A84B] mt-3 mb-2 transition-all duration-500 ease-out group-hover:w-full opacity-50 sm:opacity-0 group-hover:opacity-100 rounded-full"></div>
+
+            <div className="grid grid-rows-[1fr] sm:grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out">
+              <div className="overflow-hidden">
+                <p className="text-white/90 leading-relaxed text-sm pt-1 sm:pt-2 opacity-100 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                  {item.desc}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+    
+    <div className="mt-10 md:mt-16 text-center reveal">
+      <a href="#offer" className="btn-auto-shine block sm:inline-block w-full sm:w-auto bg-gradient-to-r from-[#DEB85D] to-[#EFCF7A] text-[#2A0E00] px-8 sm:px-12 py-4 sm:py-5 rounded-xl sm:rounded-2xl font-medium text-lg sm:text-xl shadow-[0_15px_30px_rgba(200,168,75,0.3)] hover:-translate-y-1 transition-transform duration-300">
+        Fix Your Problems NOW!
+      </a>
+    </div>
+  </div>
+</section>
 
       <HowItWorksSection />
 

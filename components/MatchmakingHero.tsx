@@ -4,16 +4,20 @@ import Image from "next/image";
 import { useState, type ReactNode } from "react";
 import { Star, ArrowRight, Play, Sparkles } from "lucide-react";
 
-// Helper component for the bottom stats bar
+// Helper component for the bottom stats bar (Updated for single-row mobile layout)
 function HeroStat({ n, label, icon }: { n: string; label: string; icon?: ReactNode }) {
   return (
-    <div className="flex items-center gap-3">
-      <div className="grid h-8 w-8 sm:h-10 sm:w-10 place-items-center rounded-full bg-gradient-gold shrink-0">
+    <div className="flex items-center gap-1.5 sm:gap-3 min-w-0">
+      <div className="grid h-6 w-6 sm:h-10 sm:w-10 place-items-center rounded-full bg-gradient-gold shrink-0">
         {icon ?? <Sparkles className="h-3 w-3 sm:h-4 sm:w-4 text-ink" />}
       </div>
-      <div className="text-left">
-        <p className="flex items-center gap-1 Georgia text-xl sm:text-2xl text-ink leading-none">{n}</p>
-        <p className="text-[10px] sm:text-xs uppercase tracking-widest text-ink-soft/60 mt-1">{label}</p>
+      <div className="text-left min-w-0">
+        <p className="flex items-center gap-0.5 Georgia text-xs sm:text-2xl text-ink font-bold sm:font-normal leading-none whitespace-nowrap">
+          {n}
+        </p>
+        <p className="text-[8px] sm:text-xs uppercase tracking-normal sm:tracking-widest text-ink-soft/60 mt-0.5 truncate">
+          {label}
+        </p>
       </div>
     </div>
   );
@@ -119,8 +123,9 @@ export default function MatchmakingHero() {
                 />
               </div>
               
-              {/* Large Play Button Overlay */}
-              <div className="absolute z-20 inset-0 flex items-center justify-center pointer-events-none">
+              {/* Large Play Button Overlay - MOVED TO BOTTOM */}
+              {/* Changed `items-center` to `items-end` and added `pb-12 sm:pb-24` padding */}
+              <div className="absolute z-20 inset-0 flex items-end justify-center pb-20 sm:pb-28 pointer-events-none">
                 <div className="bg-white/20 backdrop-blur-md border border-white/40 rounded-full p-4 sm:p-5 shadow-2xl transition-all group-hover:bg-white/30 group-hover:scale-110">
                   <Play className="h-8 w-8 sm:h-10 sm:w-10 text-white fill-white translate-x-0.5" />
                 </div>
@@ -135,13 +140,21 @@ export default function MatchmakingHero() {
         </div>
       </div>
 
-      {/* Stats bar */}
-      <div className="relative lg:absolute bottom-0 left-0 right-0 z-20 mt-auto border-t border-gold/20 bg-white px-4 py-4 sm:py-5 shadow-elegant backdrop-blur-sm w-full">
-        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-y-4 gap-x-6 sm:gap-8 lg:gap-10 lg:justify-between">
+      {/* Stats bar - Fully Responsive Single Row for Mobile */}
+      <div className="relative lg:absolute bottom-0 left-0 right-0 z-20 mt-auto border-t border-gold/20 bg-white px-2 py-3 sm:px-4 sm:py-5 shadow-elegant backdrop-blur-sm w-full">
+        <div className="mx-auto flex max-w-5xl items-center justify-between gap-1 sm:gap-6 lg:gap-10">
           <HeroStat n="1.5 lakh +" label="Reports Delivered" />
-          <div className="hidden h-8 sm:h-10 w-px bg-ink/10 md:block" />
-          <HeroStat n="4.8/5" label="Average Rating" icon={<Star className="h-3 w-3 sm:h-4 sm:w-4 fill-gold text-gold" />} />
-          <div className="hidden h-8 sm:h-10 w-px bg-ink/10 md:block" />
+          
+          <div className="h-6 sm:h-10 w-px bg-ink/10 shrink-0" />
+          
+          <HeroStat 
+            n="4.8/5" 
+            label="Average Rating" 
+            icon={<Star className="h-2.5 w-2.5 sm:h-4 sm:w-4 fill-gold text-gold" />} 
+          />
+          
+          <div className="h-6 sm:h-10 w-px bg-ink/10 shrink-0" />
+          
           <HeroStat n="Personalized" label="Report" />
         </div>
       </div>
