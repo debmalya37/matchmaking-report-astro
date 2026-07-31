@@ -36,7 +36,7 @@ function ComparisonSlider2() {
   return (
     <div 
       ref={sliderRef}
-      className="relative w-full h-[600px] lg:h-[700px] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] select-none border-4 border-[#C8A84B]/20"
+      className="relative w-full h-[700px] lg:h-[700px] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] select-none border-4 border-[#C8A84B]/20"
       onMouseDown={(e) => { setIsDragging(true); handleMove(e); }}
       onTouchStart={(e) => { setIsDragging(true); handleMove(e); }}
       style={{ '--pos': `${sliderPos}%` } as React.CSSProperties}
