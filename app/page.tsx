@@ -373,7 +373,7 @@ export default function HomePage() {
             
             <div className="flex w-max animate-infinite-slide gap-3 px-4">
               {/* Duplicated array for seamless infinite looping */}
-              {[problem3, problem7, problem8, new7, problem1, problem4, problem3, problem7, problem8, new7, problem2, problem4].map((src, i) => (
+              {[problem3, problem7, problem8, problem1, problem4, problem3, problem7, problem8, problem2, problem4].map((src, i) => (
                 <div key={i} className="shrink-0 w-[140px] sm:w-[180px] aspect-square overflow-hidden rounded-2xl border border-gold/20 shadow-sm">
                   <Image src={src} alt="Happy couple" loading="lazy" width={200} height={200} className="h-full w-full object-cover" />
                 </div>
@@ -556,7 +556,7 @@ export default function HomePage() {
         { title: "Family disapproval", desc: "Get scientific proof to align both families.", img: '/new-5.jpeg' },
         { title: "Arranged marriage decisions", desc: "Compare charts before you say yes.", img: '/new-3.jpeg' },
         { title: "Mangal / Nadi Dosha fears", desc: "Know the truth — and precise remedies.", img: '/new-4.jpeg' },
-        { title: "Long-term stability doubts", desc: "See health, wealth, and progeny outlook.", img: '/new-2.jpeg' },
+        { title: "Long-term stability doubts", desc: "See health, wealth, and progeny outlook.", img: '/new-7.jpeg' },
         { title: "Timing of marriage", desc: "Find your most auspicious window.", img: '/new-6.jpeg' },
       ].map((item, i) => (
         <div 
