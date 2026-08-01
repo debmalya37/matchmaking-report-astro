@@ -1,16 +1,15 @@
 "use client";
 import dynamic from 'next/dynamic';
 import coupleHero from "@/public/couple-hero.jpg";
-import problem3 from "@/public/problem-3.jpg";
-import problem1 from "@/public/problem-1.jpg";
-import problem2 from "@/public/problem-2.jpg";
-
-import problem4 from "@/public/problem-4.jpg";
-import problem5 from "@/public/problem-5.jpg";
-import problem7 from "@/public/problem-7.jpg";
-import problem8 from "@/public/problem-8.png";
-import problem9 from "@/public/problem-9.jpg";
-import problem10 from "@/public/problem-10.jpg";
+// import problem3 from "@/public/problem-3.jpg";
+import problem1 from "@/public/problem-1.jpeg";
+import problem2 from "@/public/problem-2.jpeg";
+import problem3 from "@/public/problem-3.jpeg";
+import problem4 from "@/public/problem-4.jpeg";
+import problem5 from "@/public/problem-5.jpeg";
+import problem7 from "@/public/problem-7.jpeg";
+import problem8 from "@/public/problem-8.jpeg";
+import problem6 from "@/public/problem-6.jpeg";
 import problem11 from "@/public/problem-11.jpg";
 import new7 from "@/public/new-7.jpeg";
 
@@ -374,7 +373,7 @@ export default function HomePage() {
             
             <div className="flex w-max animate-infinite-slide gap-3 px-4">
               {/* Duplicated array for seamless infinite looping */}
-              {[problem3, problem7, problem8, new7, problem10, problem11, problem3, problem7, problem8, new7, problem10, problem11].map((src, i) => (
+              {[problem3, problem7, problem8, new7, problem1, problem4, problem3, problem7, problem8, new7, problem2, problem4].map((src, i) => (
                 <div key={i} className="shrink-0 w-[140px] sm:w-[180px] aspect-square overflow-hidden rounded-2xl border border-gold/20 shadow-sm">
                   <Image src={src} alt="Happy couple" loading="lazy" width={200} height={200} className="h-full w-full object-cover" />
                 </div>
@@ -384,7 +383,7 @@ export default function HomePage() {
 
           {/* Desktop View: Standard Grid */}
           <div className="hidden md:grid mt-4 grid-cols-3 lg:grid-cols-6 gap-4">
-            {[problem3, problem7, problem8, new7, problem10, problem11].map((src, i) => (
+            {[problem3, problem7, problem8, problem2, problem1, problem4].map((src, i) => (
               <div key={i} className="aspect-square overflow-hidden rounded-2xl border border-gold/20 shadow-sm transition-transform hover:-translate-y-1 duration-300">
                 <Image src={src} alt="Happy couple" loading="lazy" width={300} height={300} className="h-full w-full object-cover" />
               </div>
