@@ -12,6 +12,7 @@ import problem8 from "@/public/problem-8.png";
 import problem9 from "@/public/problem-9.jpg";
 import problem10 from "@/public/problem-10.jpg";
 import problem11 from "@/public/problem-11.jpg";
+import new7 from "@/public/new-7.jpeg";
 
 import {
   Heart,
@@ -373,7 +374,7 @@ export default function HomePage() {
             
             <div className="flex w-max animate-infinite-slide gap-3 px-4">
               {/* Duplicated array for seamless infinite looping */}
-              {[problem3, problem7, problem8, problem9, problem10, problem11, problem3, problem7, problem8, problem9, problem10, problem11].map((src, i) => (
+              {[problem3, problem7, problem8, new7, problem10, problem11, problem3, problem7, problem8, new7, problem10, problem11].map((src, i) => (
                 <div key={i} className="shrink-0 w-[140px] sm:w-[180px] aspect-square overflow-hidden rounded-2xl border border-gold/20 shadow-sm">
                   <Image src={src} alt="Happy couple" loading="lazy" width={200} height={200} className="h-full w-full object-cover" />
                 </div>
@@ -383,7 +384,7 @@ export default function HomePage() {
 
           {/* Desktop View: Standard Grid */}
           <div className="hidden md:grid mt-4 grid-cols-3 lg:grid-cols-6 gap-4">
-            {[problem3, problem7, problem8, problem9, problem10, problem11].map((src, i) => (
+            {[problem3, problem7, problem8, new7, problem10, problem11].map((src, i) => (
               <div key={i} className="aspect-square overflow-hidden rounded-2xl border border-gold/20 shadow-sm transition-transform hover:-translate-y-1 duration-300">
                 <Image src={src} alt="Happy couple" loading="lazy" width={300} height={300} className="h-full w-full object-cover" />
               </div>
@@ -552,12 +553,12 @@ export default function HomePage() {
 
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
       {[ 
-        { title: "Uncertainty about the match", desc: "Are you truly compatible, or just infatuated?", img: 'https://i.pinimg.com/736x/1f/4f/6a/1f4f6a78eaba164f0bf7d877413a7598.jpg' },
-        { title: "Family disapproval", desc: "Get scientific proof to align both families.", img: 'https://i.pinimg.com/736x/20/a3/67/20a3674b077682e08fc7cc594bb7f921.jpg' },
-        { title: "Arranged marriage decisions", desc: "Compare charts before you say yes.", img: 'https://i.pinimg.com/1200x/45/60/82/4560829e32e059476545fa79c9ec9ce3.jpg' },
-        { title: "Mangal / Nadi Dosha fears", desc: "Know the truth — and precise remedies.", img: 'https://i.pinimg.com/736x/98/dc/7d/98dc7d529f795bf76d6a5d0d234ebcf0.jpg' },
-        { title: "Long-term stability doubts", desc: "See health, wealth, and progeny outlook.", img: 'https://i.pinimg.com/736x/64/53/93/6453930edff82f7a4cfae6278f888709.jpg' },
-        { title: "Timing of marriage", desc: "Find your most auspicious window.", img: 'https://i.pinimg.com/736x/31/57/28/3157288468e2d3d3c69b8b5d093d7fc4.jpg' },
+        { title: "Uncertainty about the match", desc: "Are you truly compatible, or just infatuated?", img: '/new-1.jpeg' },
+        { title: "Family disapproval", desc: "Get scientific proof to align both families.", img: '/new-5.jpeg' },
+        { title: "Arranged marriage decisions", desc: "Compare charts before you say yes.", img: '/new-3.jpeg' },
+        { title: "Mangal / Nadi Dosha fears", desc: "Know the truth — and precise remedies.", img: '/new-4.jpeg' },
+        { title: "Long-term stability doubts", desc: "See health, wealth, and progeny outlook.", img: '/new-2.jpeg' },
+        { title: "Timing of marriage", desc: "Find your most auspicious window.", img: '/new-6.jpeg' },
       ].map((item, i) => (
         <div 
           key={i} 
