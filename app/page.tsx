@@ -1037,12 +1037,15 @@ export default function HomePage() {
               
               <div className="space-y-3 sm:space-y-4">
                 {[
-                  "10-Year Detailed Prediction Report",
-                  "Complete Horoscope Analysis",
-                  "Shani Sade Sati, Mangalik & Kaal Sarp Analysis",
-                  "Personalized in depth Gemstone Guide",
-                  "Customized Vedic Remedies",
-                  "Dasha & Life Cycle Analysis",
+                  "Kundli & Birth Chart Analysis",
+                  "Ashtakoot (Gun Milan) Compatibility",
+                  "Manglik Dosha Analysis",
+                  "Planetary & Dasha Analysis",
+                  "Relationship Compatibility Analysis",
+                  "Marriage Challenges & Prediction",
+                  "Marriage Financial Outlook",
+                  "Relations with in-laws ",
+                  "Astrological Remedies & Recommendations",
                 ].map((f, i) => (
                   <div key={i} className="flex items-start gap-2.5 sm:gap-3 text-white/90 font-medium text-xs sm:text-sm md:text-base">
                     <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-[#E2C06A] text-[#2A0E00] flex items-center justify-center text-[10px] sm:text-xs shrink-0 shadow-md mt-0.5">✓</div>
