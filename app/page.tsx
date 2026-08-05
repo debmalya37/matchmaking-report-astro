@@ -809,105 +809,110 @@ export default function HomePage() {
       {/* ════════════════════════════════
           INSIDE THE REPORT (Cinematic Cosmic Layout)
       ════════════════════════════════ */}
-      <section className="py-12 md:py-16 lg:py-20 relative overflow-hidden bg-[#121122] text-[#fdf2d8]" >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(200,168,75,0.15)_0%,transparent_50%)] pointer-events-none" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,30,30,0.1)_0%,transparent_50%)] pointer-events-none" />
-        <div className="absolute inset-0 opacity-[0.02] mix-blend-screen pointer-events-none" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/stardust.png")' }}></div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-5 relative z-10 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          
-          {/* ================= LEFT: TEXT & FEATURES ================= */}
-          <div className="reveal text-center lg:text-left">
-            <div className="inline-block bg-[#C8A84B]/10 text-[#F5D98A] text-[9px] sm:text-xs font-medium tracking-[0.2em] uppercase px-3 sm:px-4 py-1.5 rounded-full mb-4 sm:mb-6 border border-[#C8A84B]/20">
-              Deep Vedic Analysis
+     <section className="py-12 md:py-16 lg:py-20 relative overflow-hidden bg-[#121122] text-[#fdf2d8]" >
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(200,168,75,0.15)_0%,transparent_50%)] pointer-events-none" />
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,30,30,0.1)_0%,transparent_50%)] pointer-events-none" />
+  <div className="absolute inset-0 opacity-[0.02] mix-blend-screen pointer-events-none" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/stardust.png")' }}></div>
+  
+  <div className="max-w-7xl mx-auto px-4 sm:px-5 relative z-10 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+    
+    {/* ================= LEFT: TEXT & FEATURES ================= */}
+    <div className="reveal text-center lg:text-left">
+      <div className="inline-block bg-[#C8A84B]/10 text-[#F5D98A] text-[9px] sm:text-xs font-medium tracking-[0.2em] uppercase px-3 sm:px-4 py-1.5 rounded-full mb-4 sm:mb-6 border border-[#C8A84B]/20">
+        Deep Vedic Analysis
+      </div>
+      
+      <h2 className="Georgia text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-medium mb-4 sm:mb-6 bg-gradient-to-br from-white via-[#F5D98A] to-[#C8A84B] bg-clip-text text-transparent drop-shadow-sm">
+        Get Your <br className="hidden lg:block"/> Surbhi Matchmaking Report 
+      </h2>
+      
+      {/* CHANGED: Updated the description text here */}
+      <p className="text-white/80 font-light text-sm sm:text-base lg:text-lg mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">
+        Make one of life's biggest decisions with confidence. Our Matchmaking Kundali Report provides an in-depth compatibility analysis based on Vedic astrology, helping you understand relationship strengths, potential challenges, and practical remedies for a happy, harmonious, and long-lasting marriage.
+      </p>
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-8 text-left">
+        {/* CHANGED: Replaced old feature array with the new feature cards */}
+        {[
+          { icon: "❤️", title: "Complete Kundali Matching", desc: "Detailed Ashtakoot matching with compatibility scores and expert insights." },
+          { icon: "🪐", title: "Mangal Dosha Analysis", desc: "Check Manglik compatibility and receive personalized remedies if required." },
+          { icon: "💍", title: "Marriage Compatibility Report", desc: "Understand emotional, mental, financial, and family compatibility before marriage." },
+          { icon: "📖", title: "Personalized Remedies & Guidance", desc: "Get practical Vedic remedies, mantras, and astrological guidance to strengthen your relationship." },
+        ].map((f, i) => (
+          /* CHANGED: Switched to items-start and added a flex-col text container for the title & description */
+          <div key={i} className="reveal d2 group glass-card flex items-start gap-3 p-3 sm:p-4 rounded-xl border border-white/5 bg-white/5 hover:bg-white/10 hover:border-[#C8A84B]/40 transition-all duration-300">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-[#3D1600] to-[#1A0A00] border border-[#C8A84B]/30 flex items-center justify-center text-base sm:text-xl shrink-0 shadow-inner group-hover:scale-110 transition-transform">
+              {f.icon}
             </div>
-            
-            <h2 className="Georgia text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-medium mb-4 sm:mb-6 bg-gradient-to-br from-white via-[#F5D98A] to-[#C8A84B] bg-clip-text text-transparent drop-shadow-sm">
-              Get Your <br className="hidden lg:block"/> Surbhi Matchmaking Report 
-            </h2>
-            
-            <p className="text-white/80 font-light text-sm sm:text-base lg:text-lg mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">
-              Get a detailed analysis of your birth chart quickly and accurately.
-              Our Surbhi Matchmaking Report helps you understand your planetary positions, key life challenges, and practical solutions in a simple and easy-to-understand way.
-            </p>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-8 text-left">
-              {[
-                { icon: "🕉️", text: "Special Mantras & Vedic Chants" },
-                { icon: "💎", text: "Specialized Gem Suggestions" },
-                { icon: "✨", text: "Manifestation + Astrology" },
-                { icon: "📖", text: "Laal Kitab & Nakshatra Guidance" },
-              ].map((f, i) => (
-                <div key={i} className="reveal d2 group glass-card flex items-center gap-3 p-3 sm:p-4 rounded-xl border border-white/5 bg-white/5 hover:bg-white/10 hover:border-[#C8A84B]/40 transition-all duration-300">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-[#3D1600] to-[#1A0A00] border border-[#C8A84B]/30 flex items-center justify-center text-base sm:text-xl shrink-0 shadow-inner group-hover:scale-110 transition-transform">
-                    {f.icon}
-                  </div>
-                  <div className="font-medium text-xs sm:text-sm text-white/90 group-hover:text-white transition-colors">{f.text}</div>
-                </div>
-              ))}
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4 sm:gap-6 reveal d3">
-              <div className="flex flex-col items-center sm:items-start">
-                <span className="text-[10px] sm:text-xs text-white/50 uppercase tracking-widest font-medium mb-1">Total Value</span>
-                <div className="font-sans text-3xl sm:text-4xl font-bold text-white flex items-center gap-3">
-                  ₹1100 <del className="text-lg sm:text-xl text-white/30 font-medium">₹2999</del>
-                </div>
-              </div>
-              <a href="#offer" className="btn-auto-shine block w-full sm:w-auto bg-gradient-to-r from-[#DEB85D] to-[#EFCF7A] text-[#2A0E00] px-8 py-3.5 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:shadow-[0_0_30px_rgba(239,207,122,0.3)] hover:-translate-y-1 transition-transform text-center">
-                Get My Report Now
-              </a>
+            <div className="flex flex-col text-left mt-0.5">
+              <span className="font-semibold text-xs sm:text-sm text-[#F5D98A] mb-1">{f.title}</span>
+              <span className="font-normal text-[11px] sm:text-xs text-white/70 leading-snug">{f.desc}</span>
             </div>
           </div>
+        ))}
+      </div>
 
-          {/* ================= RIGHT: CINEMATIC VIDEO ================= */}
-          <div className="reveal d2 relative h-[380px] sm:h-[500px] lg:h-[600px] w-full flex items-center justify-center overflow-hidden lg:overflow-visible mt-2 sm:mt-10 lg:mt-0">
-            
-            {/* The Cinematic Core Aura */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150px] h-[150px] sm:w-[300px] sm:h-[300px] bg-[#C8A84B] rounded-full blur-[80px] sm:blur-[100px] opacity-40 animate-pulse"></div>
-
-            {/* Concentric Orbital Rings (Scaled down slightly for mobile) */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[240px] sm:w-[350px] aspect-square border border-[#C8A84B]/30 rounded-full shadow-[0_0_30px_rgba(200,168,75,0.1)_inset]" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] sm:w-[500px] aspect-square border border-dashed border-white/20 rounded-full" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[440px] sm:w-[700px] aspect-square border border-white/5 rounded-full animate-[spin_60s_linear_infinite]" />
-            
-            {/* Luminous Planets on Rings */}
-            <div className="absolute inset-0 animate-[spin_40s_linear_infinite] pointer-events-none">
-               <div className="absolute top-[12%] right-[20%] sm:right-[30%] w-5 h-5 sm:w-8 sm:h-8 rounded-full bg-gradient-to-tr from-blue-900 to-cyan-300 shadow-[0_0_25px_rgba(34,211,238,0.7)]" />
-               <div className="absolute bottom-[15%] left-[15%] sm:left-[25%] w-4 h-4 sm:w-6 sm:h-6 rounded-full bg-gradient-to-tr from-red-900 to-orange-400 shadow-[0_0_20px_rgba(249,115,22,0.7)]" />
-            </div>
-            <div className="absolute inset-0 animate-[spin_80s_linear_infinite_reverse] pointer-events-none">
-               <div className="absolute top-[35%] sm:top-[40%] right-[2%] sm:right-[10%] w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-gradient-to-tr from-yellow-700 to-yellow-200 shadow-[0_0_15px_rgba(253,224,71,0.6)]" />
-            </div>
-
-            {/* Floating Book in Center - SIGNIFICANTLY BIGGER ON MOBILE (200px vs old 160px) */}
-            <div className="w-[200px] sm:w-[220px] lg:w-[350px] aspect-[1/1.4]  rounded-xl rounded-r-2xl  z-20 flex flex-col items-center justify-center relative animate-float">
-               
-               {/* Assuming reportImgError and setReportImgError are defined in your component state */}
-               {!reportImgError ? (
-                 <div className="w-[200px] md:w-[250px] lg:w-[350px] aspect-[1/1.4] overflow-hidden rounded-xl rounded-r-2xl">
-                  <video 
-                  src="/gif2.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className= "w-full h-full object-cover object-top"
-                  />
-                 </div>
-
-               ) : (
-                 <div className="absolute inset-1 border-2 border-[#C8A84B] flex flex-col items-center justify-center p-3 text-center bg-gradient-to-b from-[#FCF7EE] to-[#E8D8B8] rounded-lg rounded-r-xl">
-                   <div className="Georgia text-[#3D1600] font-medium text-xs sm:text-sm tracking-widest mb-1"></div>
-                   <div className="Georgia text-[#8B1E1E] font-medium text-2xl sm:text-3xl mb-6"> Surbhi Matchmaking Report </div>
-                   <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-[#C8A84B] flex items-center justify-center text-2xl bg-white shadow-inner">👁️</div>
-                 </div>
-               )}
-
-            </div>
+      <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4 sm:gap-6 reveal d3">
+        <div className="flex flex-col items-center sm:items-start">
+          <span className="text-[10px] sm:text-xs text-white/50 uppercase tracking-widest font-medium mb-1">Total Value</span>
+          <div className="font-sans text-3xl sm:text-4xl font-bold text-white flex items-center gap-3">
+            ₹1100 <del className="text-lg sm:text-xl text-white/30 font-medium">₹2999</del>
           </div>
         </div>
-      </section>
+        <a href="#offer" className="btn-auto-shine block w-full sm:w-auto bg-gradient-to-r from-[#DEB85D] to-[#EFCF7A] text-[#2A0E00] px-8 py-3.5 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:shadow-[0_0_30px_rgba(239,207,122,0.3)] hover:-translate-y-1 transition-transform text-center">
+          Get My Report Now
+        </a>
+      </div>
+    </div>
+
+    {/* ================= RIGHT: CINEMATIC VIDEO ================= */}
+    <div className="reveal d2 relative h-[380px] sm:h-[500px] lg:h-[600px] w-full flex items-center justify-center overflow-hidden lg:overflow-visible mt-2 sm:mt-10 lg:mt-0">
+      
+      {/* The Cinematic Core Aura */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150px] h-[150px] sm:w-[300px] sm:h-[300px] bg-[#C8A84B] rounded-full blur-[80px] sm:blur-[100px] opacity-40 animate-pulse"></div>
+
+      {/* Concentric Orbital Rings (Scaled down slightly for mobile) */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[240px] sm:w-[350px] aspect-square border border-[#C8A84B]/30 rounded-full shadow-[0_0_30px_rgba(200,168,75,0.1)_inset]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] sm:w-[500px] aspect-square border border-dashed border-white/20 rounded-full" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[440px] sm:w-[700px] aspect-square border border-white/5 rounded-full animate-[spin_60s_linear_infinite]" />
+      
+      {/* Luminous Planets on Rings */}
+      <div className="absolute inset-0 animate-[spin_40s_linear_infinite] pointer-events-none">
+          <div className="absolute top-[12%] right-[20%] sm:right-[30%] w-5 h-5 sm:w-8 sm:h-8 rounded-full bg-gradient-to-tr from-blue-900 to-cyan-300 shadow-[0_0_25px_rgba(34,211,238,0.7)]" />
+          <div className="absolute bottom-[15%] left-[15%] sm:left-[25%] w-4 h-4 sm:w-6 sm:h-6 rounded-full bg-gradient-to-tr from-red-900 to-orange-400 shadow-[0_0_20px_rgba(249,115,22,0.7)]" />
+      </div>
+      <div className="absolute inset-0 animate-[spin_80s_linear_infinite_reverse] pointer-events-none">
+          <div className="absolute top-[35%] sm:top-[40%] right-[2%] sm:right-[10%] w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-gradient-to-tr from-yellow-700 to-yellow-200 shadow-[0_0_15px_rgba(253,224,71,0.6)]" />
+      </div>
+
+      {/* Floating Book in Center - SIGNIFICANTLY BIGGER ON MOBILE (200px vs old 160px) */}
+      <div className="w-[200px] sm:w-[220px] lg:w-[350px] aspect-[1/1.4]  rounded-xl rounded-r-2xl  z-20 flex flex-col items-center justify-center relative animate-float">
+          
+          {/* Assuming reportImgError and setReportImgError are defined in your component state */}
+          {!reportImgError ? (
+            <div className="w-[200px] md:w-[250px] lg:w-[350px] aspect-[1/1.4] overflow-hidden rounded-xl rounded-r-2xl">
+            <video 
+            src="/gif2.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className= "w-full h-full object-cover object-top"
+            />
+            </div>
+
+          ) : (
+            <div className="absolute inset-1 border-2 border-[#C8A84B] flex flex-col items-center justify-center p-3 text-center bg-gradient-to-b from-[#FCF7EE] to-[#E8D8B8] rounded-lg rounded-r-xl">
+              <div className="Georgia text-[#3D1600] font-medium text-xs sm:text-sm tracking-widest mb-1"></div>
+              <div className="Georgia text-[#8B1E1E] font-medium text-2xl sm:text-3xl mb-6"> Surbhi Matchmaking Report </div>
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-[#C8A84B] flex items-center justify-center text-2xl bg-white shadow-inner">👁️</div>
+            </div>
+          )}
+
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* ════════════════════════════════
           AUTHORITY (Acharya Style)
